@@ -7,6 +7,8 @@ function createUserCard(name)
 {
     let card = document.createElement("div")
     card.classList.add("user-card")
+    let avatar = document.createElement("div")
+    avatar.innerText = "👤"
     let username = document.createElement("p")
     username.innerText = name
     let delBtn = document.createElement("button")
@@ -17,6 +19,7 @@ function createUserCard(name)
         usersList.removeChild(card)
 
     })
+    card.appendChild(avatar)
     card.appendChild(username)
     card.appendChild(delBtn)
 
